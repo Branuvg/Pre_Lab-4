@@ -1,0 +1,34 @@
+{
+    "SpaceUVG":[
+        {
+            "usuario": "usuario1",
+            "id": 12345,
+            "public_key": "clave_publica_123",
+            "monto": 1500.50,
+            "cuotas": 3,
+            "numero_de_tarjeta": 4567890123456789,
+            "fecha_de_vencimiento": 1223,
+            "codigo_CVV": 123
+        },
+        {
+            "usuario": "usuario2",
+            "id": 67890,
+            "public_key": "clave_publica_456",
+            "monto": 2500.75,
+            "cuotas": 4,
+            "numero_de_tarjeta": 5678901234567890,
+            "fecha_de_vencimiento": 524,
+            "codigo_CVV": 456
+        },
+        {
+            "usuario": "usuario3",
+            "id": 13579,
+            "public_key": "clave_publica_789",
+            "monto": 1800.20,
+            "cuotas": 2,
+            "numero_de_tarjeta": 3456789012345678,
+            "fecha_de_vencimiento": 1922,
+            "codigo_CVV": 789
+        }
+    ]
+}

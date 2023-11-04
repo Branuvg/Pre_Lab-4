@@ -26,14 +26,22 @@ public static void LeerArchivo(List<Transaccion> transacciones){
             long numeroDeTarjeta = (long) Tran.get("numero_de_tarjeta");
             long fechaDeVencimiento = (long) Tran.get("fecha_de_vencimiento");
             long codigoCVV = (long) Tran.get("codigo_CVV");
-            Transaccion transaccion = new Transaccion(usuario, id, publicKey, monto, cuotas, numeroDeTarjeta, fechaDeVencimiento, codigoCVV);
-            transacciones.add(transaccion);
+            if (String.valueOf(numeroDeTarjeta).charAt(0) =='4' ){
+                Visa Visa = new Visa(usuario, id, publicKey, monto, cuotas, numeroDeTarjeta, fechaDeVencimiento, codigoCVV);
+                transacciones.add(Visa);
+            }else if (String.valueOf(numeroDeTarjeta).charAt(0) =='5' ) {
+                //Mastercard Mastercard = new Mastercard(usuario, id, publicKey, monto, cuotas, numeroDeTarjeta, fechaDeVencimiento, codigoCVV);
+                //transacciones.add(Mastercard);
+            }else if (String.valueOf(numeroDeTarjeta).charAt(0) =='3' ){
+                AmericanExpress AmericanExpress = new AmericanExpress(usuario, id, publicKey, monto, cuotas, numeroDeTarjeta, fechaDeVencimiento, codigoCVV, publicKey);
+                transacciones.add(AmericanExpress);
+            }else{
+                System.out.println("Esta tarjeta no es reconocidad como alguna");
+            }
         }
         
-    System.out.println("que paso");
-
     } catch (IOException | ParseException e) {
-        System.out.println("quie paso");
+        System.out.println("que paso");
     }
 
 }

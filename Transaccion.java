@@ -1,4 +1,4 @@
-public class Transaccion {
+public class Transaccion implements Especificacion{
     private String usuario;
     private long id;
     private String publicKey;
@@ -93,6 +93,11 @@ public class Transaccion {
                 ", numeroDeTarjeta=" + getNumeroDeTarjeta() + 
                 ", fechaDeVencimiento=" + getFechaDeVencimiento() + 
                 ", codigoCVV=" + getCodigoCVV();
+    }
+
+    @Override
+    public void especificar() {
+        // TODO Auto-generated method stub
     }
 
 }

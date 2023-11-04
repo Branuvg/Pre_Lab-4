@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transacciones>
+  <transaccion>
+    <usuario>usuario1</usuario>
+    <id>12345</id>
+    <public_key>clave_publica_123</public_key>
+    <monto>1500.5</monto>
+  </transaccion>
+</transacciones>
